@@ -15,5 +15,5 @@ body{
     padding: 5em;
     margin: 0 auto;
     background-color: rgb(95, 158, 160, 0.5);
-    border: solid 1px;
+    border: solid 1px transparent;
 }
