@@ -4,8 +4,16 @@
 
 body{
     color: #fff;
-    background-color: rgb(18, 22, 79);
-    display: flex;
-    justify-content: center;
-    align-items: center;
+    background-color: rgb(10, 12, 41);
+    margin: 0 auto;
+    padding: 10em;
+}
+
+.container{
+    width: 90%;
+    max-width: 600px;
+    padding: 5em;
+    margin: 0 auto;
+    background-color: rgb(95, 158, 160, 0.5);
+    border: solid 1px;
 }
