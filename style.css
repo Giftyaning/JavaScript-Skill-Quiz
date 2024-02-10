@@ -10,15 +10,13 @@ body {
 }
 
 .container {
-    display: flex;
-    justify-content: center;
-    align-items: center;
     max-height: 100vh;
     max-width: 100%;
     padding: 2em;
     overflow: hidden;
     overflow-y: scroll;
     gap: 3em;
+    background-color: aqua;
 }
 
 nav{
@@ -31,6 +29,7 @@ nav i{
     font-size: 3rem;
     color: rgb(0, 255, 255, 0.5);
 }
+
 
 h1{
     color: rgb(0, 255, 255);
