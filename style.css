@@ -17,8 +17,10 @@ body {
     overflow-y: scroll;
     gap: 3em;
     background-color: aqua;
+    padding-top: 5em;
 }
 
+/* Navbar */
 nav{
     padding: .5em;
     display: flex;
@@ -30,9 +32,66 @@ nav i{
     color: rgb(0, 255, 255, 0.5);
 }
 
-
+/* Typography */
 h1{
     color: rgb(0, 255, 255);
     font-size: 2.7rem;
     text-shadow: rgb(137, 26, 185) .11em .12em;
+}
+
+/* Questions */
+.questions{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    flex-direction: column;
+    margin-top: 3em;
+    background-color: brown;
+    padding: 5em;
+}
+
+/* Question */
+.question{
+    display: flex;
+    justify-content: center;
+    background-color: chartreuse;
+    width: 100rem;
+    max-width: 100%;
+    max-height: 3rem;
+    padding: .8em;
+}
+
+/* Answers */
+.answers{
+    display: flex;
+    align-items: center;
+    gap: .9em;
+    flex-direction: column;
+    width: 100rem;
+    max-width: 100%;
+    max-height: 3rem;
+    padding: .8em;
+}
+
+.answer{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: chartreuse;
+    width: 100rem;
+    max-width: 60%;
+    max-height: 2rem;
+    padding: .8em;
+}
+
+q{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: chartreuse;
+    width: 100rem;
+    max-width: 60%;
+    max-height: 2rem;
+    padding: .8em;
 }
