@@ -12,12 +12,10 @@ body {
 .container {
     max-height: 100vh;
     max-width: 100%;
-    padding: 2em;
+    padding: 1em 2em 4em;
     overflow: hidden;
     overflow-y: scroll;
     gap: 3em;
-    background-color: aqua;
-    padding-top: 5em;
 }
 
 /* Navbar */
@@ -39,23 +37,21 @@ h1{
     text-shadow: rgb(137, 26, 185) .11em .12em;
 }
 
-/* Questions */
+/* Questions Display */
 .questions{
     display: flex;
     justify-content: center;
     align-items: center;
     flex-direction: column;
-    flex-direction: column;
-    margin-top: 3em;
-    background-color: brown;
-    padding: 5em;
+    margin-top: 2em;
+    padding: 3em;
+    overflow: scroll;
 }
 
 /* Question */
 .question{
     display: flex;
     justify-content: center;
-    background-color: chartreuse;
     width: 100rem;
     max-width: 100%;
     max-height: 3rem;
@@ -78,20 +74,19 @@ h1{
     display: flex;
     justify-content: center;
     align-items: center;
-    background-color: chartreuse;
     width: 100rem;
     max-width: 60%;
     max-height: 2rem;
     padding: .8em;
 }
 
-q{
+.correct-answer{
     display: flex;
     justify-content: center;
     align-items: center;
-    background-color: chartreuse;
     width: 100rem;
-    max-width: 60%;
+    max-width: 80%;
     max-height: 2rem;
     padding: .8em;
+    margin-top: 10em;
 }
