@@ -10,7 +10,8 @@ body {
 }
 
 .container {
-    display: flex;
+    display: grid;
+    grid-template-columns: 2fr 1fr;
     max-height: 100vh;
     max-width: 100%;
     padding: 1em 2em 4em;
