@@ -17,6 +17,11 @@ body {
     overflow-y: scroll;
 }
 
+/* Typography */
+h1{
+    font-size: clamp(3rem, 2vw, 5rem);
+}
+
 /* Background Gradient animation */
 #background-gradient{
     width: 100%;
@@ -42,22 +47,37 @@ body {
 }
 /* Background Gradient animation End */
 
-/* Hero Section */
-.hero{
-    background-color: aqua;
-    padding: 5em;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    flex-direction: column;
-}
-/* Hero Section End */
-
 /* Nav bar */
 .nav{
     display: flex;
-    background-color: blue;
     justify-content: space-between;
     padding: .7em;
 }
 /* Nav bar End */
+
+/* Hero Section */
+.hero{
+    padding: 5em 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    gap: 2em;
+}
+
+.intro{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    padding: 0 2em;
+    gap: 3em;
+}
+
+.intro button{
+    height: 3em;
+    width: 10em;
+    border-radius: .5em;
+}
+/* Hero Section End */
+
