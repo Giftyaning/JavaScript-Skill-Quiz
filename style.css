@@ -69,7 +69,8 @@ p{
     gap: 2em;
 }
 
-.intro{
+.intro,
+.quiz{
     display: flex;
     justify-content: center;
     align-items: center;
@@ -78,10 +79,57 @@ p{
     gap: 3em;
 }
 
+/* Buttons */
 .intro button{
     height: 3em;
     width: 10em;
     border-radius: .5em;
+    background-color: transparent;
+    border: 1px solid #fff;
+    color: #fff;
+    gap: 2em;
 }
+
+.answer-buttons{
+    width: 90%;
+    gap: 1em;
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+}
+
+.answer{
+    width: 100%;
+    max-width: 50rem;
+    height: 5rem;
+
+}
+/* Buttons End */
+
+/* Quiz */
+.quiz{
+    width: 100%;
+    padding: 3em 0;
+}
+
+.timer{
+    background-color: rgb(12, 75, 100, .25);
+    display: flex;
+    padding: 1em;
+    justify-content: space-between;
+    width: 90%;
+    border-radius: 1.5em;
+}
+
+
+/* Quiz End */
+
 /* Hero Section End */
 
+@media (max-width: 768px) {
+    .answer-buttons{
+        display: inline;
+    }
+    .answer{
+        margin-bottom: 1.5em;
+    }
+}
