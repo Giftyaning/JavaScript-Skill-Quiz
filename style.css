@@ -12,7 +12,7 @@ body {
 .container {
     max-height: 100vh;
     max-width: 100%;
-    padding: 2em;
+    padding: 1em;
     overflow: hidden;
     overflow-y: scroll;
 }
