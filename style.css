@@ -45,10 +45,19 @@ body {
 /* Hero Section */
 .hero{
     background-color: aqua;
-    padding: 3em;
+    padding: 5em;
     display: flex;
     justify-content: center;
     align-items: center;
     flex-direction: column;
 }
 /* Hero Section End */
+
+/* Nav bar */
+.nav{
+    display: flex;
+    background-color: blue;
+    justify-content: space-between;
+    padding: .7em;
+}
+/* Nav bar End */
