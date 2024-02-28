@@ -69,10 +69,6 @@ p{
     gap: 2em;
 }
 
-.first-intro{
-    display: none;
-}
-
 .intro,
 .quiz{
     display: flex;
@@ -113,6 +109,7 @@ p{
 .quiz{
     width: 100%;
     padding: 1em 0;
+    display: none;
 }
 
 .timer{
