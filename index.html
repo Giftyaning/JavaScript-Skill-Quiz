@@ -11,33 +11,33 @@
     <div class="container" id="background-gradient">
 
         <ul class="nav">
-            <li class="back">Back</li>
-            <li class="quit">Quit Quiz</li>
+            <li class="back" id="back">Back</li>
+            <li class="quit" id="quit">Quit Quiz</li>
         </ul>
 
         <div class="hero">
-            <div class="first-intro">
+            <div class="first-intro" id="first-intro">
                 <h1>JavaScript Quiz Game</h1>
-                <div class="intro">
+                <div class="intro" id="intro">
                         <p>Welcome to the JavaScript Quiz Game! Test your JavaScript knowledge and have fun.</p>
-                    <button onclick="startQuiz()">Start Quiz</button>
+                    <button onclick="startQuiz()" id="start-button">Start Quiz</button>
                 </div>
             </div>
             
 
             <div class="quiz" id="quiz">
-                <div class="timer">
-                    <div class="completed">3 Done</div>
-                    <div class="time">10s</div>
-                    <div class="remaining">2 Left</div>
+                <div class="timer" id="timer">
+                    <div class="completed" id="completed">3 Done</div>
+                    <div class="time" id="time">10s</div>
+                    <div class="remaining" id="remaining">2 Left</div>
                 </div>
 
                 <h2 id="question">Questions goes here</h2>
-                <div class="answer-buttons">
-                    <button class="answer">Answer 1</button>
-                    <button class="answer">Answer 2</button>
-                    <button class="answer">Answer 3</button>
-                    <button class="answer">Answer 4</button>
+                <div class="answer-buttons" id="answer-buttons">
+                    <button class="answer" id="answer">Answer 1</button>
+                    <button class="answer" id="answer">Answer 2</button>
+                    <button class="answer" id="answer">Answer 3</button>
+                    <button class="answer" id="answer">Answer 4</button>
                 </div>
             </div>
         </div>
