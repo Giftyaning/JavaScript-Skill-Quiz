@@ -61,12 +61,16 @@ p{
 
 /* Hero Section */
 .hero{
-    padding: 5em 0;
+    padding: 1em 0;
     display: flex;
     justify-content: center;
     align-items: center;
     flex-direction: column;
     gap: 2em;
+}
+
+.first-intro{
+    display: none;
 }
 
 .intro,
@@ -101,25 +105,36 @@ p{
     width: 100%;
     max-width: 50rem;
     height: 5rem;
-
+    border-radius: 2em;
 }
 /* Buttons End */
 
 /* Quiz */
 .quiz{
     width: 100%;
-    padding: 3em 0;
+    padding: 1em 0;
 }
 
 .timer{
     background-color: rgb(12, 75, 100, .25);
     display: flex;
-    padding: 1em;
+    padding: .5em 2em;
     justify-content: space-between;
+    align-items: center;
     width: 90%;
     border-radius: 1.5em;
 }
 
+.time{
+    border: 2px solid #fff;
+    max-height: .5rem;
+    max-width: .5rem;
+    padding: 2em;
+    border-radius: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
 
 /* Quiz End */
 
