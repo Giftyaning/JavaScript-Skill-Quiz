@@ -75,14 +75,13 @@ let questions = [
 
 //Function to display the questions
 function displayQuestion(index) {
-  // Get the question and answer elements
   var questionElement = document.getElementById("question");
   var answerButtons = document.getElementById("answer-buttons");
 
-  // Display the question text
+  //To display the question text
   questionElement.textContent = questions[index].question;
 
-  // Clear previous answer buttons
+  //To remove any content from the answer buttons
   answerButtons.innerHTML = "";
 
   // Display answer buttons for the current question
