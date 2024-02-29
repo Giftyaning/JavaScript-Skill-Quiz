@@ -73,3 +73,48 @@ let questions = [
   },
 ];
 
+//Function to display the questions
+function displayQuestion(index) {
+  // Get the question and answer elements
+  var questionElement = document.getElementById("question");
+  var answerButtons = document.getElementById("answer-buttons");
+
+  // Display the question text
+  questionElement.textContent = questions[index].question;
+
+  // Clear previous answer buttons
+  answerButtons.innerHTML = "";
+
+  // Display answer buttons for the current question
+  for (var i = 0; i < questions[index].answers.length; i++) {
+    var button = document.createElement("button");
+    button.textContent = questions[index].answers[i];
+    button.classList.add("answer");
+    button.onclick = function () {
+      checkAnswer(i);
+    };
+    answerButtons.appendChild(button);
+  }
+}
+
+// Function to check the selected answer
+function checkAnswer(index) {
+  // Increment score if the selected answer is correct
+  if (index === questions[currentQuestion].correctIndex) {
+    score++;
+  }
+
+  // Move to the next question or end the quiz
+  currentQuestion++;
+  if (currentQuestion < questions.length) {
+    displayQuestion(currentQuestion);
+  } else {
+    endQuiz();
+  }
+}
+
+// Function to end the quiz
+function endQuiz() {
+  // Display the score
+  alert("Quiz completed! Your score is " + score);
+}
