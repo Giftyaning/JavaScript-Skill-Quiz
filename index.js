@@ -117,3 +117,17 @@ function endQuiz() {
   // Display the score
   alert("Quiz completed! Your score is " + score);
 }
+
+//Timer function
+let timeLeft = 60;
+
+function beginQuiz() {
+  setInterval(function () {
+    if (timeLeft > 0) {
+      timeLeft--;
+      // Update the timer display
+    } else {
+      // End the quiz
+    }
+  }, 1000);
+}
