@@ -1,5 +1,5 @@
 const questionElement = document.getElementById("question");
-const answerButoon = document.getElementById("answers");
+const answersContainer = document.getElementById("answers");
 const nextButton = document.getElementById("next-btn");
 
 
@@ -43,3 +43,34 @@ const quizData = [
 ];
 
 
+//Question number and score
+let currentQuestionIndex = 0;
+let score = 0;
+
+//To start the quiz
+function startQuiz(){
+  currentQuestionIndex = 0;
+  score = 0;
+  nextButton.innerHTML = "Next";
+  showQuestion();
+}
+
+//To show questions
+function showQuestion(){
+  let currentQuestion = quizData[currentQuestionIndex];
+  let questionNu = currentQuestionIndex + 1;
+  questionElement.innerHTML = questionNu + ". " + currentQuestion.question
+
+  answersContainer.innerHTML = "";
+
+  //To display the answer option
+  currentQuestion.choices.forEach((choice, index) => {
+    const choiceButton = document.createElement("button");
+    choiceButton.classList.add("answer-btn");
+    choiceButton.textContent = choice;
+    answersContainer.appendChild(choiceButton);
+    choiceButton.addEventListener("click", () => selectAnswer(index));
+  });
+}
+
+startQuiz();
