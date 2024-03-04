@@ -79,9 +79,10 @@ function showQuestion() {
 
 function selectAnswer(event, index) {
   const selectedChoice = event.target;
-  const selectedAnswer = selectedChoice.innerHTML;
+  const selectedAnswer = selectedChoice.textContent; 
+  const currentQuestion = quizData[currentQuestionIndex]; 
 
-  if (selectedAnswer === quizData[currentQuestionIndex].choices[index]) {
+  if (selectedAnswer === currentQuestion.answer) {
     score += 1;
     feedback.innerHTML = "Correct!";
     feedback.style.color = "green";
