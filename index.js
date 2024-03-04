@@ -1,7 +1,7 @@
 const questionElement = document.getElementById("question");
 const answersContainer = document.getElementById("answers");
 const nextButton = document.getElementById("next-btn");
-
+const feedback = document.getElementById("feedback"); // Add feedback element
 
 // Quiz Questions and Choices
 const quizData = [
@@ -42,13 +42,12 @@ const quizData = [
   },
 ];
 
-
 //Question number and score
 let currentQuestionIndex = 0;
 let score = 0;
 
 //To start the quiz
-function startQuiz(){
+function startQuiz() {
   currentQuestionIndex = 0;
   score = 0;
   nextButton.innerHTML = "Next";
@@ -56,10 +55,10 @@ function startQuiz(){
 }
 
 //To show questions
-function showQuestion(){
+function showQuestion() {
   let currentQuestion = quizData[currentQuestionIndex];
   let questionNu = currentQuestionIndex + 1;
-  questionElement.innerHTML = questionNu + ". " + currentQuestion.question
+  questionElement.innerHTML = questionNu + ". " + currentQuestion.question;
 
   answersContainer.innerHTML = "";
 
@@ -69,8 +68,27 @@ function showQuestion(){
     choiceButton.classList.add("answer-btn");
     choiceButton.textContent = choice;
     answersContainer.appendChild(choiceButton);
-    choiceButton.addEventListener("click", () => selectAnswer(index));
+    choiceButton.addEventListener("click", (event) =>
+      selectAnswer(event, index)
+    );
+    if (quizData[currentQuestionIndex].answer === choice) {
+      choiceButton.dataset.answer = "correct";
+    }
   });
+}
+
+function selectAnswer(event, index) {
+  const selectedChoice = event.target;
+  const selectedAnswer = selectedChoice.innerHTML;
+
+  if (selectedAnswer === quizData[currentQuestionIndex].choices[index]) {
+    score += 1;
+    feedback.innerHTML = "Correct!";
+    feedback.style.color = "green";
+  } else {
+    feedback.innerHTML = "Wrong!";
+    feedback.style.color = "red";
+  }
 }
 
 startQuiz();
