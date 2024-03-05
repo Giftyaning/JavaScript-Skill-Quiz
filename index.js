@@ -87,9 +87,38 @@ function selectAnswer(event, index) {
     feedback.innerHTML = "Correct!";
     feedback.style.color = "green";
   } else {
-    feedback.innerHTML = "Wrong!";
+    feedback.innerHTML =
+      "Wrong! The correct answer is: " + currentQuestion.answer;
     feedback.style.color = "red";
   }
+
+  //To disable the buttons when an answer is selected
+  const choiceButtons = answersContainer.querySelectorAll(".answer-btn");
+  choiceButtons.forEach((button) => {
+    button.disabled = true;
+    nextButton.style.display = "block";
+  });
+  
 }
+
+function handleNextButton(){
+  currentQuestionIndex++;
+  if(currentQuestionIndex < quizData.length){
+    showQuestion();
+  }else {
+    showScore();
+  }
+
+}
+nextButton.addEventListener("click", ()=>{
+  if(currentQuestionIndex < quizData.length) {
+    currentQuestionIndex++;
+    handleNextButton();
+  }else {
+    startQuiz();
+  }
+});
+
+
 
 startQuiz();
