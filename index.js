@@ -71,10 +71,9 @@ function showQuestion() {
     choiceButton.addEventListener("click", (event) =>
       selectAnswer(event, index)
     );
-    if (quizData[currentQuestionIndex].answer === choice) {
-      choiceButton.dataset.answer = "correct";
-    }
   });
+
+  feedback.innerHTML = "";
 }
 
 function selectAnswer(event, index) {
@@ -86,10 +85,12 @@ function selectAnswer(event, index) {
     score += 1;
     feedback.innerHTML = "Correct!";
     feedback.style.color = "green";
+    selectedChoice.classList.add("correct-answer");
   } else {
     feedback.innerHTML =
       "Wrong! The correct answer is: " + currentQuestion.answer;
     feedback.style.color = "red";
+    selectedChoice.classList.add("wrong-answer");
   }
 
   //To disable the buttons when an answer is selected
@@ -99,17 +100,28 @@ function selectAnswer(event, index) {
     nextButton.style.display = "block";
   });
   
+  nextButton.style.display = "block";
+}
+
+function showScore(){
+  questionElement.innerHTML = `You scored ${score} out of ${quizData.length}!`;
+  feedback.innerHTML = "";
+  nextButton.innerHTML = "Play Again";
+  nextButton.style.display = "block";
+
+  // Clear answer choices
+  answersContainer.innerHTML = "";
 }
 
 function handleNextButton(){
-  currentQuestionIndex++;
-  if(currentQuestionIndex < quizData.length){
+  if(currentQuestionIndex < quizData.length ){
     showQuestion();
   }else {
     showScore();
   }
 
 }
+
 nextButton.addEventListener("click", ()=>{
   if(currentQuestionIndex < quizData.length) {
     currentQuestionIndex++;
