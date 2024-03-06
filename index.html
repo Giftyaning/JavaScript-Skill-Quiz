@@ -10,13 +10,21 @@
 <body>
     <div class="container">
         <h1>JavaScript Quiz</h1>
+        <div class="hero">
+            <h2>Welcome to the Quiz Game!</h2>
+            <div id="intro">
+                <p>This is a simple quiz game. Test your Javascript knowledge!</p>
+                <p id="intro-p">Press the start button to begin.</p>
+                <button id="start-btn">Start</button>
+            </div>
+        </div>
         <div class="quiz">
             <h2 class="question" id="question">What is your name?</h2>
             <div class="answers" id="answers">
-                <button id="answer-btn">option 1</button>
-                <button id="answer-btn">option 2</button>
-                <button id="answer-btn">option 3</button>
-                <button id="answer-btn">option 4</button>
+                <button class="btn" id="answer-btn">option 1</button>
+                <button class="btn" id="answer-btn">option 2</button>
+                <button class="btn" id="answer-btn">option 3</button>
+                <button class="btn" id="answer-btn">option 4</button>
             </div>
             <button id="next-btn">Next</button>
         </div>

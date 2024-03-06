@@ -9,3 +9,74 @@ body{
     color: #fff;
 }
 
+/* Typography */
+h1{
+    font-size: clamp(4rem 3vw 6rem);
+    text-transform: capitalize;
+    color: blue;
+    display: none;
+}
+
+h2{
+    font-size: clamp(3rem 3vw 5rem);
+}
+
+
+
+.container{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    padding: 5em;
+    gap: 3em;
+}
+
+.quiz,
+.hero,
+#intro{
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    gap: 1em;
+}
+
+.quiz{
+    display: none;
+}
+
+#intro{
+    padding: 5em 3em;
+    gap: 4em;
+
+}
+
+#intro button{
+    width: 40%;
+    max-height: 2rem;
+    padding: .5em;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.answers{
+    display: flex;
+    flex-direction: column;
+    gap: .5em;
+    width: 60%;
+}
+
+.answers button{
+    height: 3rem;
+    border-radius: .5rem;
+    background-color: #fff;
+}
+
+#next-btn{
+    height: 2rem;
+    width: 30%;
+    border-radius: .5rem;
+}
