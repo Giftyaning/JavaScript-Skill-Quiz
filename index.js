@@ -1,7 +1,9 @@
+const startButton = document.getElementById("start-btn");
+const quizContainer = document.getElementById("quiz");
 const questionElement = document.getElementById("question");
 const answersContainer = document.getElementById("answers");
 const nextButton = document.getElementById("next-btn");
-const feedback = document.getElementById("feedback"); // Add feedback element
+const feedback = document.getElementById("feedback"); 
 
 // Quiz Questions and Choices
 const quizData = [
@@ -46,8 +48,12 @@ const quizData = [
 let currentQuestionIndex = 0;
 let score = 0;
 
+startButton.addEventListener("click", startQuiz);
+
 //To start the quiz
 function startQuiz() {
+  quizContainer.style.display = "block";
+
   currentQuestionIndex = 0;
   score = 0;
   nextButton.innerHTML = "Next";
@@ -99,7 +105,7 @@ function selectAnswer(event, index) {
     button.disabled = true;
     nextButton.style.display = "block";
   });
-  
+
   nextButton.style.display = "block";
 }
 
