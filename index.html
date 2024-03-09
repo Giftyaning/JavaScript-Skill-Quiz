@@ -1,37 +1,35 @@
 <!DOCTYPE html>
-<html lang="en">
+<html>
 <head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="style.css">
-    <title>QuizGenius</title>
+  <title>Basic Web Page</title>
+  <meta name="viewport" content="width=device-width,initial-scale=1" >
+  <link href="style.css" rel="stylesheet">
 </head>
 <body>
-    <div class="container">
-        <h1>QuizGenius</h1>
-        <div class="hero">
-            <h2>The Ultimate Javascript Game</h2>
-            <div id="intro">
-                <h2 id="enter">Enter your Username</h2>
-                <input type="text" id="name" placeholder="Eg. John">
-                <button id="start-btn">Start  Quiz</button>
-            </div>
-        </div>
-        <div class="quiz" id="quiz">
-            <h2 class="question" id="question">What is your name?</h2>
-            <div class="answers" id="answers">
-                <button class="btn" id="answer-btn">option 1</button>
-                <button class="btn" id="answer-btn">option 2</button>
-                <button class="btn" id="answer-btn">option 3</button>
-                <button class="btn" id="answer-btn">option 4</button>
-            </div>
-            <button id="next-btn">Next</button>
-        </div>
-        <div class="feedback" id="feedback"></div>
-
+  <div class="start-page" id="start-page">
+    <h1>Javascript Quiz</h1>
+    <input type="text" id="name" placeholder="Eg. John">
+    <button class="start-btn" id="startBtn">Start Quiz</button>
+   </div>
+  <!-- Questions and answers -->
+  <div class="quizwrap" id="quizWrap">
+    <div class="timer" id="timer"></div>
+    <div class="question" id="question"></div>
+    <div class="choices">
+      <div class="choice-btn"></div>
+      <div class="choice-btn"></div>
+      <div class="choice-btn"></div>
+      <div class="choice-btn"></div>
     </div>
-    
-    <script src="index.js"></script>
+
+    <button id="next-btn">Next</button>
+  </div>
+
+   <div class="feedback" id="feedback">
+    <div class="score" id="score"></div>
+    <button class="play-again" id="playAgainBtn">Play Again</button>
+   </div>
+  <script src="index.js"></script>
 </body>
 </html>
+
