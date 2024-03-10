@@ -147,7 +147,11 @@ function restartQuiz() {
 
   playAgainBtn.style.display = "block";
   feedback.style.display = "block";
-}
+
+  // Event listener to display input value in feedback
+  nameInput.addEventListener("input", function() {
+  feedback.textContent = `Hello, ${nameInput.value}!`});
+};
 
 // Quiz Questions
 const questions = [
