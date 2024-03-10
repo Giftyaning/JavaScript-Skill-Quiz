@@ -85,7 +85,7 @@ function handleNext() {
   currentQuestionIndex++;
   if (currentQuestionIndex < questions.length) {
     loadQuestion();
-    nextBtn.style.display = "none"; // Hide the next button after showing the next question
+    nextBtn.style.display = "none"; 
   } else {
     endQuiz();
     playAgainBtn.style.display = "block";
@@ -114,7 +114,7 @@ function selectAnswer(answer) {
     button.disabled = true;
   });
 
-  nextBtn.style.display = "block"; // Show the next button after an answer is selected
+  nextBtn.style.display = "block"; 
 }
 
 // End Quiz Function
