@@ -6,29 +6,36 @@
   <link href="style.css" rel="stylesheet">
 </head>
 <body>
-  <div class="start-page" id="start-page">
-    <h1>Javascript Quiz</h1>
-    <input type="text" id="name" placeholder="Eg. John">
-    <button class="start-btn" id="startBtn">Start Quiz</button>
-   </div>
-  <!-- Questions and answers -->
-  <div class="quizwrap" id="quizWrap">
-    <div class="timer" id="timer"></div>
-    <div class="question" id="question"></div>
-    <div class="choices">
-      <div class="choice-btn"></div>
-      <div class="choice-btn"></div>
-      <div class="choice-btn"></div>
-      <div class="choice-btn"></div>
+    <div class="container">
+        <!-- Start page -->
+        <div class="start-page" id="start-page">
+            <h1>Javascript Quiz</h1>
+            <input type="text" id="name" placeholder="Eg. John">
+            <button class="start-btn" id="startBtn">Start Quiz</button>
+        </div>
+
+        <!-- Questions and answers -->
+        <div class="quizwrap" id="quizWrap">
+            <div class="timer" id="timer"></div>
+            <div class="question" id="question"></div>
+            <div class="choices">
+            <div class="choice-btn"></div>
+            <div class="choice-btn"></div>
+            <div class="choice-btn"></div>
+            <div class="choice-btn"></div>
+            </div>
+
+            <button id="next-btn">Next</button>
+        </div>
+
+        <!-- Feedback -->
+        <div class="feedback" id="feedback">
+            <div class="score" id="score"></div>
+            <button class="play-again" id="playAgainBtn">Play Again</button>
+        </div>
     </div>
+    
 
-    <button id="next-btn">Next</button>
-  </div>
-
-   <div class="feedback" id="feedback">
-    <div class="score" id="score"></div>
-    <button class="play-again" id="playAgainBtn">Play Again</button>
-   </div>
   <script src="index.js"></script>
 </body>
 </html>
