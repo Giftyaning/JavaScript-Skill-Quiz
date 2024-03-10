@@ -19,11 +19,11 @@ let score = 0;
 // Event listeners
 startBtn.addEventListener("click", startQuiz);
 nextBtn.addEventListener("click", handleNext);
-playAgainBtn.addEventListener("click", restartQuiz);
+
 
 // Styling
-startBtn.style.color = "green";
-nextBtn.style.display = "none";
+nextBtn.style.display = "none"; 
+playAgainBtn.style.display = "block"; 
 
 // Start Quiz Function
 function startQuiz() {
@@ -63,7 +63,7 @@ function loadQuestion() {
     choiceButton.classList.add("choice-btn");
     choiceButton.addEventListener("click", () => {
       selectAnswer(answer);
-      feedback.style.display = "block"; 
+      feedback.style.display = "block";
     });
     choicesContainer.appendChild(choiceButton);
   });
@@ -86,6 +86,7 @@ function handleNext() {
     nextBtn.style.display = "none"; // Hide the next button after showing the next question
   } else {
     endQuiz();
+    playAgainBtn.style.display = "block";
   }
 }
 
@@ -129,27 +130,21 @@ function endQuiz() {
   nextBtn.removeEventListener("click", handleNext);
   nextBtn.addEventListener("click", restartQuiz);
 
-  nextBtn.style.display = "block";
-  nextBtn.disabled = false;
+
+  // Show the playAgainBtn
+  playAgainBtn.style.display = "block";
+  feedback.style.display = "block";
 }
-
-
 
 // Restart Quiz Function
 function restartQuiz() {
   currentQuestionIndex = 0;
   score = 0;
   feedback.style.display = "none";
-  nextBtn.removeEventListener("click", restartQuiz);
-  nextBtn.addEventListener("click", handleNext);
-
-  const choiceButtons = document.querySelectorAll(".choice-btn");
-  choiceButtons.forEach((button) => {
-    button.classList.remove("selected");
-    button.disabled = false;
-  });
-
   startQuiz();
+
+  playAgainBtn.style.display = "block";
+  feedback.style.display = "block";
 }
 
 // Quiz Questions
@@ -190,7 +185,7 @@ const questions = [
     correctAnswer: "//",
   },
   {
-    question: "What is the purpose of the `addEventlistener()` method?",
+    question: "What is the purpose of the `addEventListener()` method?",
     answers: [
       "Creates a new event",
       "Defines a custom event",
@@ -201,12 +196,7 @@ const questions = [
   },
   {
     question: "What is the result of `typeof null`?",
-    answers: [
-      "object",
-      "null",
-      "undefined",
-      "number",
-    ],
+    answers: ["object", "null", "undefined", "number"],
     correctAnswer: "object",
-  }
+  },
 ];
