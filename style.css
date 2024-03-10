@@ -10,6 +10,97 @@ body{
     color: #fff;
 }
 
+/* Typography */
+h1 {
+    font-size: clamp(5rem 3vw 8rem);
+}
+h2{
+    font-size: clamp(2rem 2vw 5rem);
+}
+
+.container{
+    width: 100%;
+    max-height: 100vh;
+    padding: 10em 5em;
+    color: #fff;
+}
+
+.start-page,
+.quizwrap{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    gap: 2.5em;
+    max-height: 90vh;
+    overflow: scroll;
+}
+
+#name{
+    padding: 1em;
+    width: 12rem;
+    height: 2.5rem;
+    border-radius: 3em;
+    background-color: transparent;
+    border: solid .12em white;
+}
+
+.quizwrap{
+    display: none;
+}
+
+.timer{
+    padding: 1em;
+    width: 2.5rem;
+    height: 2.5rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 50%;
+    border: solid .12em white;
+    margin-bottom: 2em;
+    margin-left: 10em;
+}
+
+.question{
+    margin-left: 3em;
+}
+
+.choices{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    gap: 1em;
+    width: 60%;
+    padding: .5em;
+    margin-top: 3em;
+    margin-bottom: 3em;
+    margin-left: 5em;
+}
+
+.choice-btn{
+    width: 90%;
+    padding: .5em;
+    overflow: hidden;
+    border-radius: .5em;
+    border: solid .12em white;
+    background-color: transparent;
+    color: #fff;
+}
+
+button{
+    width: 20%;
+    padding: .5em;
+    margin-left: 5em;
+    background-color: transparent;
+    color: #fff;
+    margin-bottom: 2em;
+    border-radius: .5em;
+    border: solid .12em white;
+}
+
+
 .feedback{
     display: none;
 }

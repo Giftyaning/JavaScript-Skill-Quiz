@@ -25,17 +25,19 @@ nextBtn.addEventListener("click", handleNext);
 nextBtn.style.display = "none"; 
 playAgainBtn.style.display = "block"; 
 
+
 // Start Quiz Function
 function startQuiz() {
   startPage.style.display = "none";
   quiz.style.display = "block";
+
   loadQuestion();
 }
 
 // Countdown Timer Function
 function startCountdown() {
   let seconds = 60;
-  timer.textContent = `Time left: ${seconds}s`;
+  timer.textContent = `${seconds}s`;
 
   countdownInterval = setInterval(() => {
     seconds--;
@@ -44,7 +46,7 @@ function startCountdown() {
       clearInterval(countdownInterval);
       handleNext();
     } else {
-      timer.textContent = `Time left: ${seconds}s`;
+      timer.textContent = `${seconds}s`;
     }
   }, 1000);
 }
